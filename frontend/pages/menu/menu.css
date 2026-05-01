@@ -1,0 +1,272 @@
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* ===== PAGE HEADER ===== */
+.menu-header {
+  padding-bottom: 1.5rem;
+}
+
+.menu-header__title {
+  font-size: 1.5rem;
+  color: var(--color-dark);
+  margin-bottom: .5rem;
+}
+
+.menu-header__desc {
+  font-size: .88rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.menu-header__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ===== FILTER TABS ===== */
+.menu-filters {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+.menu-filter {
+  padding: .45rem 1.1rem;
+  border-radius: 99px;
+  font-size: .82rem;
+  font-weight: 500;
+  font-family: inherit;
+  background: transparent;
+  border: 1.5px solid var(--color-border);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: background .15s, color .15s, border-color .15s;
+}
+
+.menu-filter:hover {
+  border-color: var(--color-dark);
+  color: var(--color-dark);
+}
+
+.menu-filter--active {
+  background: var(--color-dark);
+  border-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.menu-filter--active:hover {
+  background: var(--color-brown);
+  border-color: var(--color-brown);
+  color: var(--color-white);
+}
+
+/* ===== SORT ===== */
+.menu-sort {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.menu-sort__label {
+  font-size: .82rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.menu-sort__wrap {
+  width: 160px;
+}
+
+.menu-sort__select {
+  padding: .45rem .9rem;
+  font-size: .82rem;
+  background: var(--color-bg);
+}
+
+/* ===== PRODUCT GRID ===== */
+.menu-grid-section {
+  flex: 1;
+  padding-bottom: 4rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  height: 100%;
+}
+
+/* ===== PRODUCT CARD ===== */
+.menu-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-card__img-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.menu-card__img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.menu-card__img--placeholder {
+  background: var(--color-highlight);
+  object-fit: contain;
+}
+
+.menu-card__badge {
+  position: absolute;
+  top: .7rem;
+  left: .7rem;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.menu-card__body {
+  padding: .9rem 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.menu-card__category {
+  display: block;
+  font-size: .55rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: .3rem;
+}
+
+.menu-card__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: .5rem;
+  margin-bottom: .35rem;
+}
+
+.menu-card__name {
+  font-family: 'Inter', sans-serif;
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.3;
+}
+
+.menu-card__price {
+  font-size: .88rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.menu-card__desc {
+  font-size: .78rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  flex: 1;
+  margin-bottom: .85rem;
+}
+
+.menu-card__btn {
+  display: block;
+  width: 100%;
+  justify-content: center;
+  font-size: .82rem;
+  padding: .55rem;
+}
+
+/* ===== LOYALTY BANNER ===== */
+.loyalty-banner {
+  background: var(--color-brown);
+  padding-block: 2.75rem;
+  margin-bottom: 0;
+}
+
+.loyalty-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.loyalty-banner__content {
+  flex: 1;
+  min-width: 260px;
+}
+
+.loyalty-banner__title {
+  font-size: 1.35rem;
+  color: var(--color-white);
+  margin-bottom: .45rem;
+}
+
+.loyalty-banner__desc {
+  font-size: .85rem;
+  color: rgba(255,255,255,.65);
+  line-height: 1.65;
+  margin-bottom: 1.1rem;
+  max-width: 480px;
+}
+
+.loyalty-banner__progress-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .5rem;
+  max-width: 480px;
+}
+
+.loyalty-banner__reward {
+  font-size: .78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,.8);
+}
+
+.loyalty-banner__pts {
+  font-size: .78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,.6);
+}
+
+.loyalty-banner__bar-track {
+  height: 7px;
+  background: rgba(255,255,255,.2);
+  border-radius: 99px;
+  overflow: hidden;
+  max-width: 480px;
+}
+
+.loyalty-banner__bar-fill {
+  height: 100%;
+  background: var(--color-white);
+  border-radius: 99px;
+}
+
+.loyalty-banner__cta {
+  border-color: var(--color-white);
+  color: var(--color-white);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.loyalty-banner__cta:hover {
+  background: var(--color-white);
+  color: var(--color-brown);
+}

@@ -1,0 +1,114 @@
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.ap-main {
+  padding-block: 3.5rem 5rem;
+}
+
+.ap-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* ===== LEFT PANEL ===== */
+.ap-panel__title {
+  font-size: 1.5rem;
+  color: var(--color-dark);
+  margin-bottom: .75rem;
+  line-height: 1.25;
+}
+
+.ap-panel__desc {
+  font-size: .88rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  max-width: 320px;
+  margin-bottom: 1.75rem;
+}
+
+.ap-panel__img-wrap {
+  position: relative;
+}
+
+.ap-panel__img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+}
+
+/* Artisan Tip floating card */
+.ap-tip {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 5%;
+  width: calc(100% - 5rem);
+  display: flex;
+  align-items: flex-start;
+  gap: .85rem;
+  padding: .95rem 1.1rem;
+  border-radius: var(--radius-lg);
+}
+
+.ap-tip__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #FFF0E6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ap-tip__title {
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: .2rem;
+}
+
+.ap-tip__text {
+  font-size: .78rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* ===== FORM CARD ===== */
+.ap-form-card {
+  padding: 2.25rem 2.5rem 2.5rem;
+}
+
+.ap-form__btn-submit,
+.ap-form__btn-draft {
+  flex: 1;
+  justify-content: center;
+  font-size: .9rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .ap-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .ap-panel__img { height: 280px; }
+
+  .ap-tip {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar__nav { display: none; }
+  .navbar__search { display: none; }
+
+  .ap-form-card { padding: 1.5rem; }
+}

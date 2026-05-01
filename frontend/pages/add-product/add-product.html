@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Product — Brownie Points</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../common/common.css" />
+  <link rel="stylesheet" href="../../common/form.css" />
+  <link rel="stylesheet" href="add-product.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container navbar__inner">
+      <a href="../homepage/homepage.html" class="navbar__logo">Brownie Points</a>
+      <nav class="navbar__nav">
+        <a href="../homepage/homepage.html" class="navbar__link">Home</a>
+        <a href="../menu/menu.html" class="navbar__link">Menu</a>
+        <a href="../add-product/add-product.html" class="navbar__link navbar__link--active">Add Product</a>
+        <a href="../contact/contact.html" class="navbar__link">Contact</a>
+      </nav>
+      <div class="navbar__actions">
+        <a href="../menu/menu.html" class="btn btn-primary navbar__cta">Order Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main class="ap-main">
+    <div class="container ap-layout">
+
+      <!-- Left panel -->
+      <div class="ap-panel">
+        <h1 class="ap-panel__title">Create a New Masterpiece</h1>
+        <p class="ap-panel__desc">Every brownie starts with a spark of joy. Share your latest artisanal creation with the community.</p>
+
+        <div class="ap-panel__img-wrap">
+          <img src="/frontend/assets/hero.png" alt="Artisan brownie" class="ap-panel__img" />
+          <div class="ap-tip card">
+            <div class="ap-tip__icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--color-accent)" stroke="none"><path d="M12 2l1.09 3.26L16 6.27l-2.5 2.43.59 3.44L12 10.27l-2.09 1.87.59-3.44L8 6.27l2.91-.99L12 2zM5 19l.67 2H18.33L19 19H5z"/><rect x="9" y="14" width="6" height="4" rx="1"/></svg>
+            </div>
+            <div>
+              <p class="ap-tip__title">Artisan Tip</p>
+              <p class="ap-tip__text">High-quality photos increase<br />sales by 40%.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right panel: form card -->
+      <div class="card ap-form-card">
+        <form class="form" onsubmit="return false;">
+
+          <div class="form__field">
+            <label class="form__label" for="treat-name">Treat Name</label>
+            <input id="treat-name" type="text" class="form__input" placeholder="e.g. Midnight Salted Caramel" />
+          </div>
+
+          <div class="form__row">
+            <div class="form__field">
+              <label class="form__label" for="category">Category</label>
+              <div class="form__select-wrap">
+                <select id="category" class="form__select">
+                  <option value="" disabled selected>Select Category</option>
+                  <option>Brownies</option>
+                  <option>Coffee</option>
+                  <option>Seasonal</option>
+                  <option>Vegan</option>
+                </select>
+                <svg class="form__select-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </div>
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="price">Price</label>
+              <div class="form__prefix-wrap">
+                <span class="form__prefix">$</span>
+                <input id="price" type="number" step="0.01" min="0" class="form__input form__prefix-input" placeholder="4.50" />
+              </div>
+            </div>
+          </div>
+
+          <div class="form__field">
+            <label class="form__label" for="description">Description</label>
+            <textarea id="description" class="form__textarea" placeholder="Describe the flavors, textures, and love baked into this treat..."></textarea>
+          </div>
+
+          <div class="form__field">
+            <label class="form__label" for="badge">Badge <span style="font-weight:400;color:var(--color-text-muted)">(optional)</span></label>
+            <input id="badge" type="text" class="form__input" placeholder="e.g. Best Seller" />
+          </div>
+
+          <div class="form__field">
+            <label class="form__label" for="image-url">Image URL <span style="font-weight:400;color:var(--color-text-muted)">(optional)</span></label>
+            <input id="image-url" type="url" class="form__input" placeholder="https://example.com/image.jpg" />
+          </div>
+
+          <div class="form__actions">
+            <button type="submit" class="btn btn-primary btn-thick btn-shadow ap-form__btn-submit">Add Product</button>
+            <button type="button" class="btn btn-outline btn-thick ap-form__btn-draft">Save Draft</button>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">Brownie Points</span>
+        <p class="footer__copy">© 2026 Brownie Points. Baked with love in a small kitchen.</p>
+      </div>
+      <nav class="footer__nav">
+        <a href="#" class="footer__link">Our Story</a>
+        <a href="#" class="footer__link">Experience</a>
+        <a href="#" class="footer__link">About Us</a>
+        <a href="#" class="footer__link">Privacy Policy</a>
+      </nav>
+      <div class="footer__social">
+        <!-- Instagram -->
+        <a href="#" class="footer__social-link" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <!-- TikTok / generic share -->
+        <a href="#" class="footer__social-link" aria-label="Social">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../common/common.js"></script>
+  <script src="add-product.js"></script>
+</body>
+</html>

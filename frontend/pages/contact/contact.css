@@ -1,0 +1,217 @@
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* ===== PAGE HEADER ===== */
+.contact-header {
+  padding-top: 3.5rem;
+  padding-bottom: 2.5rem;
+  text-align: center;
+}
+
+.contact-header__title {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--color-dark);
+  margin-bottom: .75rem;
+}
+
+.contact-header__desc {
+  font-size: .92rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* ===== BODY: two-column layout ===== */
+.contact-body {
+  padding-bottom: 4rem;
+}
+
+.contact-body__inner {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* ===== CONTACT FORM CARD ===== */
+.contact-form-card {
+  padding: 2.25rem 2.5rem 2.5rem;
+}
+
+.contact-form__textarea {
+  min-height: 160px;
+}
+
+/* ===== SIDEBAR ===== */
+.contact-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Info card */
+.contact-info-card {
+  padding: 1.5rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.contact-info__item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.contact-info__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-dark);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-info__title {
+  font-family: 'Inter', sans-serif;
+  font-size: .88rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: .3rem;
+}
+
+.contact-info__text {
+  font-size: .82rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.contact-info__hours {
+  border-collapse: collapse;
+  font-size: .82rem;
+  color: var(--color-text-muted);
+}
+
+.contact-info__hours td {
+  padding: .12rem .6rem .12rem 0;
+  vertical-align: top;
+}
+
+.contact-info__hours td:first-child {
+  white-space: nowrap;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+/* Social */
+.contact-social {
+  padding: .25rem .1rem;
+}
+
+.contact-social__label {
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: .75rem;
+}
+
+.contact-social__icons {
+  display: flex;
+  gap: .65rem;
+}
+
+.contact-social__btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-white);
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color .15s, color .15s;
+}
+
+.contact-social__btn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* Loyalty card */
+.contact-loyalty-card {
+  padding: 1.25rem 1.5rem 1.35rem;
+}
+
+.contact-loyalty__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .85rem;
+}
+
+.contact-loyalty__title {
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.contact-loyalty__pts {
+  font-size: .88rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.contact-loyalty__bar-track {
+  height: 8px;
+  background: var(--color-border);
+  border-radius: 99px;
+  overflow: hidden;
+  margin-bottom: .65rem;
+}
+
+.contact-loyalty__bar-fill {
+  height: 100%;
+  background: var(--color-dark);
+  border-radius: 99px;
+}
+
+.contact-loyalty__note {
+  font-size: .78rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* ===== MAP ===== */
+.contact-map {
+  padding-bottom: 5rem;
+}
+
+.contact-map__wrap {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  height: 360px;
+  background: var(--color-bg-section);
+}
+
+.contact-map__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .contact-body__inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar__nav { display: none; }
+
+  .contact-form-card { padding: 1.5rem; }
+}

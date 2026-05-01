@@ -1,0 +1,110 @@
+/* ===== FORM LAYOUT ===== */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+}
+
+.form__label {
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+}
+
+/* ===== INPUTS ===== */
+.form__input,
+.form__select,
+.form__textarea {
+  background: var(--color-bg);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: .72rem 1rem;
+  font-size: .87rem;
+  font-family: inherit;
+  color: var(--color-text);
+  outline: none;
+  transition: border-color .15s;
+  width: 100%;
+}
+
+.form__input:focus,
+.form__select:focus,
+.form__textarea:focus {
+  border-color: var(--color-accent);
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+  color: var(--color-text-light);
+}
+
+/* ===== SELECT ===== */
+.form__select-wrap {
+  position: relative;
+}
+
+.form__select {
+  appearance: none;
+  cursor: pointer;
+  padding-right: 2.5rem;
+}
+
+.form__select-arrow {
+  position: absolute;
+  right: .9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--color-text-muted);
+}
+
+/* ===== PREFIX INPUT (e.g. currency symbol) ===== */
+.form__prefix-wrap {
+  position: relative;
+}
+
+.form__prefix {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: .87rem;
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.form__prefix-input {
+  padding-left: 1.9rem;
+}
+
+/* ===== TEXTAREA ===== */
+.form__textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+/* ===== ACTIONS ===== */
+.form__actions {
+  display: flex;
+  gap: 1rem;
+  padding-top: .25rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .form__row { grid-template-columns: 1fr; }
+  .form__actions { flex-direction: column; }
+}
