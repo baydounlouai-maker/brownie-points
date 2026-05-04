@@ -29,7 +29,7 @@ function renderSpecials(products) {
       <div class="card-body">
         <h3 class="card-title">${esc(featured.name)}</h3>
         <p class="card-desc">${esc(featured.description || '')}</p>
-        <a href="../menu/menu.html" class="btn specials__view-menu-btn">View Menu <span>→</span></a>
+        <a href="/menu" class="btn specials__view-menu-btn">View Menu <span>→</span></a>
       </div>
     </div>
     <div class="specials__side">${sideCards}</div>`;
