@@ -45,22 +45,3 @@ docker compose down -v
 ```bash
 docker compose logs -f
 ```
-
-## Project Structure
-
-```
-brownie-points/
-├── frontend/
-│   ├── common/          # Shared CSS (variables, components, navbar)
-│   ├── homepage/
-│   ├── menu/
-│   ├── add-product/
-│   ├── contact/
-│   └── assets/
-├── backend/
-│   ├── api/             # PHP endpoints (products, categories, contact, newsletter)
-│   ├── config.php
-│   └── schema.sql
-├── Dockerfile
-└── docker-compose.yml
-```
