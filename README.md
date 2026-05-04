@@ -24,7 +24,7 @@ A brownie & coffee shop website with a product menu, contact form, and newslette
 docker compose up --build
 ```
 
-The app will be available at [http://localhost:8080/frontend/homepage/homepage.html](http://localhost:8080/frontend/homepage/homepage.html)
+The app will be available at [http://localhost:8080/frontend/pages/homepage/homepage.html](http://localhost:8080/frontend/homepage/homepage.html)
 
 **Start in background:**
 ```bash

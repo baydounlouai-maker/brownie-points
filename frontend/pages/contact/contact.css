@@ -36,10 +36,11 @@ h1, h2, h3, h4 {
 /* ===== CONTACT FORM CARD ===== */
 .contact-form-card {
   padding: 2.25rem 2.5rem 2.5rem;
+  height: 100%;
 }
 
 .contact-form__textarea {
-  min-height: 160px;
+  min-height: 180px;
 }
 
 /* ===== SIDEBAR ===== */
@@ -201,17 +202,4 @@ h1, h2, h3, h4 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-  .contact-body__inner {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  .navbar__nav { display: none; }
-
-  .contact-form-card { padding: 1.5rem; }
 }

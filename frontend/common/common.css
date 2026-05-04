@@ -7,8 +7,7 @@
 
 html {
   font-size: 16px;
-  scroll-behavior: smooth;
-  height: 100%;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -19,6 +18,8 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -232,12 +233,8 @@ h1, h2, h3, h4, h5 {
   height: 62px;
 }
 
-.navbar__logo {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--color-dark);
-  white-space: nowrap;
+.navbar__logo-img {
+  height: 40px;
 }
 
 .navbar__nav {
@@ -333,6 +330,8 @@ h1, h2, h3, h4, h5 {
   background: var(--color-bg);
   border-top: 1px solid var(--color-border);
   padding-block: 2.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .footer__inner {
@@ -354,6 +353,15 @@ h1, h2, h3, h4, h5 {
   color: var(--color-dark);
   display: block;
   margin-bottom: .35rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer__logo-img {
+  height: 20px;
+  display: inline-block;
 }
 
 .footer__copy {
@@ -389,3 +397,108 @@ h1, h2, h3, h4, h5 {
 }
 
 .footer__social-link:hover { color: var(--color-accent); }
+
+/* ===== FORM LAYOUT ===== */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+}
+
+.form__label {
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+}
+
+/* ===== INPUTS ===== */
+.form__input,
+.form__select,
+.form__textarea {
+  background: var(--color-bg);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: .72rem 1rem;
+  font-size: .87rem;
+  font-family: inherit;
+  color: var(--color-text);
+  outline: none;
+  transition: border-color .15s;
+  width: 100%;
+}
+
+.form__input:focus,
+.form__select:focus,
+.form__textarea:focus {
+  border-color: var(--color-accent);
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+  color: var(--color-text-light);
+}
+
+/* ===== SELECT ===== */
+.form__select-wrap {
+  position: relative;
+}
+
+.form__select {
+  appearance: none;
+  cursor: pointer;
+  padding-right: 2.5rem;
+}
+
+.form__select-arrow {
+  position: absolute;
+  right: .9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--color-text-muted);
+}
+
+/* ===== PREFIX INPUT (e.g. currency symbol) ===== */
+.form__prefix-wrap {
+  position: relative;
+}
+
+.form__prefix {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: .87rem;
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.form__prefix-input {
+  padding-left: 1.9rem;
+}
+
+/* ===== TEXTAREA ===== */
+.form__textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+/* ===== ACTIONS ===== */
+.form__actions {
+  display: flex;
+  gap: 1rem;
+  padding-top: .25rem;
+}

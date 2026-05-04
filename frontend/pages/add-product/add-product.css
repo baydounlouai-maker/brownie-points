@@ -83,32 +83,8 @@ h1, h2, h3, h4 {
   padding: 2.25rem 2.5rem 2.5rem;
 }
 
-.ap-form__btn-submit,
-.ap-form__btn-draft {
+.ap-form__btn-submit {
   flex: 1;
   justify-content: center;
   font-size: .9rem;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-  .ap-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .ap-panel__img { height: 280px; }
-
-  .ap-tip {
-    position: static;
-    transform: none;
-    width: 100%;
-    margin-top: 1rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .navbar__nav { display: none; }
-  .navbar__search { display: none; }
-
-  .ap-form-card { padding: 1.5rem; }
 }

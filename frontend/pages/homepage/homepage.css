@@ -383,29 +383,3 @@ h1, h2, h3, h4 {
   color: rgba(255,255,255,.4);
   margin-top: 1rem;
 }
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-  .hero__inner,
-  .heritage__inner {
-    grid-template-columns: 1fr;
-  }
-
-  .hero__image-wrap { order: -1; }
-  .hero__image { height: 320px; }
-
-  .specials__grid { grid-template-columns: 1fr; }
-  .specials__side { flex-direction: row; }
-
-  .heritage__photo { height: 160px; }
-}
-
-@media (max-width: 600px) {
-  .navbar__nav { display: none; }
-  .navbar__search { display: none; }
-
-  .specials__side { flex-direction: column; }
-
-  .heritage__photo { height: 130px; }
-  .heritage__stats { gap: 1.5rem; }
-}
