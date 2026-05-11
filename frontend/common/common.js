@@ -1,1 +1,1 @@
-const API = '/api';
+const API = 'api';
