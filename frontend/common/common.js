@@ -1,1 +1,1 @@
-const API = '/backend/api';
+const API = '/api';

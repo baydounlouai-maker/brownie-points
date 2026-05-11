@@ -6,42 +6,43 @@ A brownie & coffee shop website with a product menu, contact form, and newslette
 
 | Layer | Technology |
 |-------|-----------|
-| Frontend | HTML, CSS, Vanilla JS |
-| Backend | PHP 8.2 |
+| Frontend | HTML, CSS, Havascript |
+| Backend | PHP 8.1 |
 | Database | MySQL 8.0 |
-| Server | Apache (via PHP official Docker image) |
-| Container | Docker + Docker Compose |
+| Server | Apache (via XAMPP) |
 
 ## Prerequisites
 
-- [Docker](https://docs.docker.com/get-docker/)
-- [Docker Compose](https://docs.docker.com/compose/install/) (included with Docker Desktop)
+- [XAMPP](https://www.apachefriends.org) (includes Apache, PHP, and MySQL)
 
-## Running the Project
+## Setup
 
-**Start:**
-```bash
-docker compose up --build
+**1. Install XAMPP** and start the **Apache** and **MySQL** modules from the XAMPP Control Panel.
+
+**2. Copy the project folder** into `C:\xampp\htdocs\` so it looks like:
+
+```
+C:\xampp\htdocs\brownie-points\
 ```
 
-The app will be available at [http://localhost:8080/](http://localhost:8080/)
+**3. Configure your database credentials** in `config/config.php`:
 
-**Start in background:**
-```bash
-docker compose up --build -d
+```php
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'brownie_points');
+define('DB_USER', 'root');
+define('DB_PASS', '');  // XAMPP MySQL has no password by default
 ```
 
-**Stop:**
-```bash
-docker compose down
-```
+**4.** Open [http://localhost/brownie-points](http://localhost/brownie-points) in your browser.
 
-**Stop and delete the database volume (full reset):**
-```bash
-docker compose down -v
-```
+The database and tables are created automatically on the first request. No manual setup needed.
 
-**View logs:**
-```bash
-docker compose logs -f
-```
+## Troubleshooting
+
+**Getting a 403 or rewrite errors?** Make sure `mod_rewrite` is enabled:
+
+1. Open `C:\xampp\apache\conf\httpd.conf`
+2. Find the `<Directory "C:/xampp/htdocs">` block
+3. Change `AllowOverride None` to `AllowOverride All`
+4. Restart Apache from the XAMPP Control Panel

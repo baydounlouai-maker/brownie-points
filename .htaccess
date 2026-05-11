@@ -1,7 +1,10 @@
 RewriteEngine On
 
-RewriteRule ^$ /homepage [R=302,L]
-RewriteRule ^homepage/?$ /frontend/pages/homepage/homepage.html [L]
-RewriteRule ^menu/?$ /frontend/pages/menu/menu.html [L]
-RewriteRule ^contact/?$ /frontend/pages/contact/contact.html [L]
-RewriteRule ^add-product/?$ /frontend/pages/add-product/add-product.html [L]
+# Change to '/' if the project is served from the server root
+RewriteBase /brownie-points/
+
+RewriteRule ^$              homepage                               [R=302,L]
+RewriteRule ^homepage/?$    frontend/pages/homepage/homepage.html [L]
+RewriteRule ^menu/?$        frontend/pages/menu/menu.html         [L]
+RewriteRule ^contact/?$     frontend/pages/contact/contact.html   [L]
+RewriteRule ^add-product/?$ frontend/pages/add-product/add-product.html [L]
