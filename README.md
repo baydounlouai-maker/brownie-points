@@ -30,6 +30,7 @@ C:\xampp\htdocs\brownie-points\
 ```php
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'brownie_points');
+define('DB_PORT', '3306');
 define('DB_USER', 'root');
 define('DB_PASS', '');  // XAMPP MySQL has no password by default
 ```

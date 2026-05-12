@@ -4,9 +4,8 @@ require_once __DIR__ . '/config.php';
 function db(): PDO {
     static $pdo;
     if (!$pdo) {
-        $init = new PDO(
-            'mysql:host=' . DB_HOST . ';charset=utf8mb4',
-            DB_USER, DB_PASS,
+        $baseDsn = 'mysql:host=' . DB_HOST . ';port=' . DB_PORT . ';charset=utf8mb4';
+        $init = new PDO($baseDsn, DB_USER, DB_PASS,
             [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
         );
         $dbExists = $init->query(
@@ -16,13 +15,13 @@ function db(): PDO {
             "SELECT COUNT(*) FROM information_schema.TABLES WHERE TABLE_SCHEMA = '" . DB_NAME . "' AND TABLE_NAME = 'products'"
         )->fetchColumn();
         if (!$dbExists || !$tableExists) {
-            foreach (array_filter(array_map('trim', explode(';', file_get_contents(__DIR__ . '/schema.sql')))) as $stmt) {
+            $statements = array_filter(array_map('trim', explode(';', file_get_contents(__DIR__ . '/schema.sql'))));
+            foreach ($statements as $stmt) {
                 $init->exec($stmt);
             }
         }
-        $pdo = new PDO(
-            'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4',
-            DB_USER, DB_PASS,
+        $dsn = $baseDsn . ';dbname=' . DB_NAME;
+        $pdo = new PDO($dsn, DB_USER, DB_PASS,
             [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC]
         );
     }
